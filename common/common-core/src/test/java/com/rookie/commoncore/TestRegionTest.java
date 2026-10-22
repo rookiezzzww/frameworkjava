@@ -81,6 +81,7 @@ public class TestRegionTest {
 
         //[{"1":{"id":1,"name":"北京","fullName":"北京市","code":"110000"}}]
         List<Map<Long, TestRegion>> regionmap =JsonUtil.string2Obj("[{\"1\":{\"id\":1,\"name\":\"北京\",\"fullName\":\"北京市\",\"code\":\"110000\"}}]",new TypeReference<List<Map<Long, TestRegion>>>(){});
+        System.out.println(regionmap);
         Assertions.assertEquals(regionmap.get(0).get(1L).getName(),"北京");
     }
 

@@ -14,8 +14,8 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import com.rookie.constants.CommonConstants;
-import io.micrometer.common.util.StringUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -145,6 +145,7 @@ public class JsonUtil {
         if (StringUtils.isEmpty(str) || clazz == null) {
             return null;
         }
+        //javaType的目的就是为了让Jackson知道你的List<T>中的T到底代表的是什么
         JavaType javaType = OBJECT_MAPPER.getTypeFactory().constructParametricType(List.class, clazz);
         try {
             return OBJECT_MAPPER.readValue(str, javaType);
