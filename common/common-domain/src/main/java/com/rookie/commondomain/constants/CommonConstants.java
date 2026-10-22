@@ -1,4 +1,4 @@
-package com.rookie.constants;
+package com.rookie.commondomain.constants;
 
 /**
  * 通用常量
