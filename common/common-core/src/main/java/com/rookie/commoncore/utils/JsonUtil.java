@@ -102,7 +102,7 @@ public class JsonUtil {
      * @param <T> 对象类型
      */
     public static <T> T string2Obj(String str, Class<T> clazz) {
-        if (StringUtils.isEmpty(str) || clazz == null) { //todo 把str==null||str.isEmpty()封装到StringUtils中
+        if (StringUtils.isEmpty(str) || clazz == null) {
             return null;
         }
         try {
