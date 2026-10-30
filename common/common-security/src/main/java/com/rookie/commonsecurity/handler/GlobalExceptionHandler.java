@@ -27,6 +27,11 @@ import java.util.stream.Collectors;
 
 /**
  * 全局异常处理器
+ * - @RestControllerAdvice：让该类为多个 Controller 提供统一处理，并将返回值写入响应体，通常是 JSON。
+ * - @ExceptionHandler(ServiceException.class)：指定这个方法处理 ServiceException 及其子类。
+ *  流程就是：业务代码抛出 ServiceException
+ * → Spring 调用匹配的异常处理方法
+ * → 返回统一的 R 格式给前端
  */
 @RestControllerAdvice
 @Slf4j

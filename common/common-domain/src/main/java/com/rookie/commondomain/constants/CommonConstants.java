@@ -16,4 +16,12 @@ public class CommonConstants {
      */
     public final static String UTF8 = "UTF-8";
 
+    /**
+     * 默认分隔符
+     */
+    public final static String DEFAULT_DELIMITER = ", ";
+    /**
+     * 空字符串
+     */
+    public final static String EMPTY_STR = "";
 }
