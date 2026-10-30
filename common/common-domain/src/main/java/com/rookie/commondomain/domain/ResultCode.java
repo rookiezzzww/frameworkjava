@@ -1,4 +1,4 @@
-package com.rookie.commondomain;
+package com.rookie.commondomain.domain;
 
 
 import lombok.AllArgsConstructor;

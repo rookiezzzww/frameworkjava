@@ -71,27 +71,27 @@ public class TestCopyLight {
     }
     @Test
     void copyInnerClass(){
-//        SourcePoJoInner sourcePoJo = new SourcePoJoInner();
-//        sourcePoJo.setUsername("bite");
-//        SourcePoJoInner.InnerClass innerClass = new SourcePoJoInner.InnerClass("sourceInner");
-//        sourcePoJo.innerClass=innerClass;
-//        System.out.println(sourcePoJo);
-//        TargetPoJoInner targetPoJo = new TargetPoJoInner();
-//        BeanUtils.copyProperties(sourcePoJo,targetPoJo);
-//        System.out.println(targetPoJo);
-//修改后代码：
         SourcePoJoInner sourcePoJo = new SourcePoJoInner();
         sourcePoJo.setUsername("bite");
         SourcePoJoInner.InnerClass innerClass = new SourcePoJoInner.InnerClass("sourceInner");
         sourcePoJo.innerClass=innerClass;
         System.out.println(sourcePoJo);
-        //分别创建targetPoJo和targetInnerClass
         TargetPoJoInner targetPoJo = new TargetPoJoInner();
-        TargetPoJoInner.InnerClass targetInnerClass = new TargetPoJoInner.InnerClass();
-        //再分别拷贝sourcePoJo和innerClass
         BeanUtils.copyProperties(sourcePoJo,targetPoJo);
-        BeanUtils.copyProperties(innerClass,targetInnerClass);
-        targetPoJo.innerClass = targetInnerClass;
         System.out.println(targetPoJo);
+//修改后代码：
+//        SourcePoJoInner sourcePoJo = new SourcePoJoInner();
+//        sourcePoJo.setUsername("bite");
+//        SourcePoJoInner.InnerClass innerClass = new SourcePoJoInner.InnerClass("sourceInner");
+//        sourcePoJo.innerClass=innerClass;
+//        System.out.println(sourcePoJo);
+//        //分别创建targetPoJo和targetInnerClass
+//        TargetPoJoInner targetPoJo = new TargetPoJoInner();
+//        TargetPoJoInner.InnerClass targetInnerClass = new TargetPoJoInner.InnerClass();
+//        //再分别拷贝sourcePoJo和innerClass
+//        BeanUtils.copyProperties(sourcePoJo,targetPoJo);
+//        BeanUtils.copyProperties(innerClass,targetInnerClass);
+//        targetPoJo.innerClass = targetInnerClass;
+//        System.out.println(targetPoJo);
     }
 }
