@@ -34,7 +34,7 @@ public class RedissonLockService {
     public RLock acquire(String lockKey, long expire) {
         try {
             final RLock lockInstance = redissonClient.getLock(lockKey);
-            // 注意：如果tryLock指定了leaseTime>0就不会续期。参考 RedissonLock类的tryAcquireAsync方法的实现
+            // 注意：如果tryLock指定了leaseTime>0就不会续期，如果为-1，自动续期，即看门狗
             lockInstance.lock(expire, TimeUnit.MILLISECONDS);
             return lockInstance;
         } catch (Exception e) {
