@@ -16,6 +16,8 @@
         <module>common-domain</module>
         <module>common-security</module>
         <module>common-redis</module>
+        <module>common-cache</module>
+        <module>common-rabbitmq</module>
     </modules>
 
     <properties>
