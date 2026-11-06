@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: bite-admin
+  profiles:
+    active: ${RUN_ENV}
+  cloud:
+    nacos:
+      discovery:
+        username: nacos
+        password: bite@123
+        namespace: frameworkjava-${RUN_ENV}
+        server-addr: ${NACOS_ADDR}
+      config:
+        username: nacos
+        password: bite@123
+        namespace: frameworkjava-${RUN_ENV}
+        server-addr: ${NACOS_ADDR}
+        file-extension: yaml
+        # 共享配置
+        shared-configs:
+          - data-id: share-redis-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+            refresh: true
+          - data-id: share-caffeine-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+            refresh: true
+          - data-id: share-mysql-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+            refresh: true
+
+# 这⼀配置⽤于定义应⽤在控制台输出⽇志时所遵循的格式规则
+logging:
+  pattern:
+    console: '[%thread] %-5level %logger{36} - %msg%n'
