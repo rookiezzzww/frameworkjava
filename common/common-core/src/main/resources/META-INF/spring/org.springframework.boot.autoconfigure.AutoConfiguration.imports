@@ -1,1 +1,2 @@
 com.rookie.commoncore.config.ThreadPoolConfig
+com.rookie.commoncore.config.RestTemplateConfig

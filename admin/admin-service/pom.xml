@@ -72,6 +72,16 @@
             <artifactId>common-redis</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.rookie</groupId>
+            <artifactId>admin-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.rookie.commoncache</groupId>
+            <artifactId>common-cache</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
